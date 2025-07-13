@@ -182,7 +182,7 @@ export const EvaluationResults: React.FC<EvaluationResultsProps> = ({
                     Average drift: ±{Object.values(result.drift_log)
                       .map(scores => Math.abs(scores[0] - scores[1]))
                       .reduce((sum, drift) => sum + drift, 0) / Object.values(result.drift_log).length
-                    }.toFixed(3)}{' points'}
+                    ).toFixed(3)} points
                   </div>
                 </div>
               </div>
