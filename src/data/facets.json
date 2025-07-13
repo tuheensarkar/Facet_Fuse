@@ -1,0 +1,104 @@
+{
+  "categories": {
+    "Linguistic Quality": {
+      "description": "Measures grammatical correctness, clarity, and language proficiency",
+      "facets": [
+        "grammar_accuracy", "sentence_structure", "word_choice", "spelling_accuracy", "punctuation_usage",
+        "vocabulary_richness", "syntax_complexity", "semantic_clarity", "lexical_diversity", "register_appropriateness",
+        "coherence_local", "coherence_global", "text_fluency", "readability_score", "linguistic_precision",
+        "morphological_accuracy", "phonetic_awareness", "prosodic_features", "discourse_markers", "transitional_phrases",
+        "grammatical_complexity", "clause_structure", "phrase_construction", "modifier_placement", "verb_tense_consistency",
+        "pronoun_reference", "article_usage", "preposition_accuracy", "conjunction_usage", "adverb_placement",
+        "adjective_order", "noun_phrase_structure", "verb_phrase_complexity", "sentence_length_variation", "paragraph_structure",
+        "text_organization", "logical_flow", "information_hierarchy", "concept_clarity", "terminology_consistency",
+        "style_consistency", "voice_consistency", "tone_consistency", "mood_expression", "linguistic_creativity",
+        "metaphor_usage", "simile_effectiveness", "analogy_clarity", "figurative_language", "literal_accuracy",
+        "connotation_awareness", "denotation_precision", "semantic_fields", "collocational_accuracy", "idiomatic_usage",
+        "phrasal_verb_usage", "compound_word_formation", "derivational_morphology", "inflectional_accuracy", "word_formation",
+        "abbreviation_usage", "acronym_clarity", "technical_terminology", "domain_vocabulary", "register_switching",
+        "code_switching", "multilingual_competence", "translation_accuracy", "cross_linguistic_interference", "language_transfer",
+        "orthographic_conventions", "capitalization_rules", "hyphenation_accuracy", "apostrophe_usage", "quotation_marks",
+        "citation_format", "reference_style", "bibliography_accuracy", "footnote_usage", "endnote_placement",
+        "textual_evidence", "source_integration", "paraphrasing_skill", "summarization_ability", "synthesis_quality"
+      ]
+    },
+    "Pragmatics": {
+      "description": "Evaluates contextual appropriateness, communicative effectiveness, and social language use",
+      "facets": [
+        "context_awareness", "audience_adaptation", "purpose_alignment", "communicative_intent", "speech_act_appropriateness",
+        "politeness_strategies", "face_saving", "social_distance", "power_relations", "cultural_sensitivity",
+        "implicit_meaning", "inference_generation", "presupposition_handling", "implicature_understanding", "conversational_maxims",
+        "turn_taking", "topic_management", "conversation_flow", "interruption_handling", "silence_management",
+        "nonverbal_cues", "paralinguistic_features", "gesture_coordination", "facial_expression", "eye_contact",
+        "proxemics_awareness", "chronemics_understanding", "haptics_appropriateness", "kinesics_interpretation", "appearance_consciousness",
+        "register_selection", "formality_level", "informality_appropriateness", "professional_discourse", "casual_interaction",
+        "academic_language", "business_communication", "technical_explanation", "lay_explanation", "expert_communication",
+        "novice_adaptation", "age_appropriateness", "gender_sensitivity", "cultural_adaptation", "socioeconomic_awareness",
+        "educational_level_matching", "professional_background", "regional_variation", "dialectal_sensitivity", "accent_awareness",
+        "humor_appropriateness", "irony_usage", "sarcasm_detection", "wit_deployment", "comedic_timing",
+        "serious_tone", "empathetic_response", "supportive_language", "encouraging_words", "motivational_speech",
+        "persuasive_techniques", "argumentative_strategies", "rhetorical_devices", "logical_appeals", "emotional_appeals",
+        "ethical_appeals", "credibility_establishment", "trust_building", "rapport_development", "relationship_maintenance",
+        "conflict_resolution", "negotiation_skills", "compromise_ability", "mediation_techniques", "diplomacy_usage",
+        "assertiveness_level", "passive_communication", "aggressive_avoidance", "passive_aggressive_detection", "direct_communication",
+        "indirect_communication", "high_context_adaptation", "low_context_clarity", "collectivist_sensitivity", "individualist_acknowledgment",
+        "hierarchy_respect", "egalitarian_approach", "temporal_orientation", "monochronic_planning", "polychronic_flexibility"
+      ]
+    },
+    "Safety": {
+      "description": "Assesses content safety, ethical considerations, and harmful content detection",
+      "facets": [
+        "hate_speech_detection", "discriminatory_language", "bias_identification", "stereotype_avoidance", "inclusive_language",
+        "violence_content", "graphic_descriptions", "self_harm_references", "suicide_ideation", "mental_health_sensitivity",
+        "substance_abuse", "addiction_references", "drug_promotion", "alcohol_glorification", "tobacco_advertising",
+        "sexual_content", "explicit_material", "inappropriate_suggestions", "grooming_indicators", "predatory_behavior",
+        "harassment_detection", "bullying_identification", "cyberbullying_signs", "trolling_behavior", "toxic_communication",
+        "misinformation_spread", "conspiracy_theories", "false_claims", "unverified_information", "fact_checking",
+        "privacy_violations", "personal_data_exposure", "doxxing_attempts", "identity_theft", "financial_fraud",
+        "phishing_indicators", "scam_detection", "malicious_links", "malware_distribution", "security_threats",
+        "political_manipulation", "propaganda_detection", "extremist_content", "radicalization_signs", "terrorist_recruitment",
+        "child_safety", "minor_protection", "age_inappropriate", "parental_guidance", "educational_safety",
+        "workplace_harassment", "professional_misconduct", "legal_violations", "copyright_infringement", "intellectual_property",
+        "defamation_risk", "libel_potential", "slander_identification", "reputation_damage", "false_accusations",
+        "medical_misinformation", "health_dangers", "pseudoscience_promotion", "dangerous_remedies", "medical_advice",
+        "financial_scams", "investment_fraud", "pyramid_schemes", "ponzi_indicators", "economic_manipulation",
+        "environmental_harm", "ecological_damage", "conservation_threats", "sustainability_violations", "pollution_promotion",
+        "animal_cruelty", "wildlife_exploitation", "endangered_species", "habitat_destruction", "conservation_ethics",
+        "cultural_appropriation", "sacred_symbols", "religious_insensitivity", "spiritual_mockery", "belief_disrespect",
+        "historical_revisionism", "genocide_denial", "war_crimes", "human_rights", "social_justice",
+        "algorithmic_bias", "ai_ethics", "automated_discrimination", "machine_fairness", "digital_rights",
+        "data_ethics", "surveillance_concerns", "tracking_behavior", "consent_violations", "autonomy_respect"
+      ]
+    },
+    "Emotion": {
+      "description": "Analyzes emotional content, sentiment, and affective communication patterns",
+      "facets": [
+        "sentiment_polarity", "emotional_intensity", "mood_detection", "affect_recognition", "feeling_expression",
+        "joy_indicators", "happiness_levels", "elation_signs", "contentment_markers", "satisfaction_measures",
+        "sadness_detection", "melancholy_signs", "grief_expression", "sorrow_indicators", "despair_markers",
+        "anger_identification", "fury_levels", "irritation_signs", "frustration_markers", "rage_indicators",
+        "fear_detection", "anxiety_levels", "worry_signs", "panic_markers", "apprehension_indicators",
+        "surprise_recognition", "astonishment_levels", "shock_signs", "amazement_markers", "bewilderment_indicators",
+        "disgust_identification", "revulsion_levels", "aversion_signs", "distaste_markers", "repugnance_indicators",
+        "love_expression", "affection_signs", "attachment_markers", "romantic_indicators", "platonic_love",
+        "trust_indicators", "confidence_levels", "faith_signs", "reliability_markers", "credibility_indicators",
+        "anticipation_detection", "expectation_levels", "hope_signs", "optimism_markers", "future_orientation",
+        "emotional_stability", "mood_swings", "affect_regulation", "emotional_control", "feeling_management",
+        "empathy_expression", "compassion_signs", "sympathy_markers", "understanding_indicators", "emotional_support",
+        "enthusiasm_levels", "passion_indicators", "excitement_signs", "energy_markers", "motivation_expression",
+        "calmness_indicators", "serenity_signs", "peace_markers", "tranquility_expression", "relaxation_levels",
+        "confusion_detection", "uncertainty_signs", "doubt_markers", "ambiguity_indicators", "perplexity_levels",
+        "pride_expression", "accomplishment_signs", "achievement_markers", "self_esteem_indicators", "confidence_expression",
+        "shame_detection", "guilt_signs", "embarrassment_markers", "humiliation_indicators", "regret_expression",
+        "envy_identification", "jealousy_signs", "resentment_markers", "bitterness_indicators", "grudge_expression",
+        "gratitude_expression", "appreciation_signs", "thankfulness_markers", "acknowledgment_indicators", "recognition_expression",
+        "curiosity_detection", "interest_signs", "wonder_markers", "inquisitiveness_indicators", "exploration_desire",
+        "boredom_identification", "disinterest_signs", "apathy_markers", "indifference_indicators", "disengagement_expression",
+        "stress_indicators", "pressure_signs", "tension_markers", "strain_expression", "overwhelm_detection",
+        "relief_expression", "comfort_signs", "ease_markers", "reassurance_indicators", "consolation_expression",
+        "loneliness_detection", "isolation_signs", "solitude_markers", "abandonment_indicators", "disconnection_expression",
+        "belonging_indicators", "inclusion_signs", "acceptance_markers", "community_expression", "connection_feelings"
+      ]
+    }
+  }
+}
