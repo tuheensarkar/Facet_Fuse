@@ -54,7 +54,7 @@ Provide your evaluation in the following JSON format:
 {
   "score": [integer from 1-5, where 1 is very poor and 5 is excellent],
   "confidence": [float from 0.0-1.0 representing your confidence in this score],
-  "reasoning": "[brief explanation of your scoring decision]"
+  "justification": "[brief explanation of why this score was assigned for this facet]"
 }
 
 Consider only this specific facet in your evaluation. Be precise and objective.
@@ -86,11 +86,48 @@ Consider only this specific facet in your evaluation. Be precise and objective.
       return {
         score: 3,
         confidence: 0.5,
-        reasoning: `Evaluation failed for ${facetName}: ${error instanceof Error ? error.message : 'Unknown error'}`
+        justification: `Evaluation failed for ${facetName}: ${error instanceof Error ? error.message : 'Unknown error'}`
       };
     }
   }
 
+  async generateRewrite(text: string, lowCategories: string[]): Promise<string> {
+    const prompt = `
+The following text has low scores in these categories: ${lowCategories.join(', ')}.
+
+Original text: "${text}"
+
+Please provide an improved version that addresses the issues in the mentioned categories. Return only the improved text without any additional explanation.
+`;
+
+    try {
+      const response = await this.makeRequest(prompt);
+      return response.trim().replace(/^["']|["']$/g, ''); // Remove quotes if present
+    } catch (error) {
+      console.error('Failed to generate rewrite:', error);
+      return text; // Return original if rewrite fails
+    }
+  }
+
+  async generateSummary(categoryAverages: Record<string, number>, flagged: boolean): Promise<string> {
+    const prompt = `
+Based on these category scores, generate a brief human-readable summary of how the message performed:
+
+${Object.entries(categoryAverages).map(([cat, score]) => `${cat}: ${score.toFixed(2)}/5`).join('\n')}
+
+Flagged for issues: ${flagged ? 'Yes' : 'No'}
+
+Provide a concise summary in one sentence focusing on the main strengths and weaknesses.
+`;
+
+    try {
+      const response = await this.makeRequest(prompt);
+      return response.trim();
+    } catch (error) {
+      console.error('Failed to generate summary:', error);
+      return 'Unable to generate summary due to evaluation error.';
+    }
+  }
   async batchEvaluateFacets(
     text: string,
     facets: Array<{ id: string; name: string; description: string; category: string }>

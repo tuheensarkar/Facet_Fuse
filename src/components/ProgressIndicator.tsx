@@ -21,7 +21,6 @@ export const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({
       <div className="flex items-center gap-3 mb-4">
         <Loader2 className="w-6 h-6 text-blue-600 animate-spin" />
         <h3 className="text-lg font-semibold text-gray-900">Evaluating with Groq + Mixtral 8x7B</h3>
-        <h3 className="text-lg font-semibold text-gray-900">Evaluating with Groq + Llama 3.1 8B</h3>
       </div>
       
       <div className="space-y-4">
