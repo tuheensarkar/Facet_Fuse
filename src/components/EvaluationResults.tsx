@@ -103,14 +103,6 @@ export const EvaluationResults: React.FC<EvaluationResultsProps> = ({
               <p className="text-gray-900 italic">"{result.text}"</p>
             </div>
             
-            {/* AI Summary */}
-            <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
-              <h4 className="text-sm font-medium text-blue-800 mb-2 flex items-center gap-2">
-                <CheckCircle className="w-4 h-4" />
-                AI Analysis Summary
-              </h4>
-              <p className="text-blue-900 text-sm">{result.summary}</p>
-            </div>
           </div>
 
           {/* Main Content */}
