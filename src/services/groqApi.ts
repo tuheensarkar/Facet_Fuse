@@ -115,7 +115,7 @@ Consider only this specific facet in your evaluation. Be precise and objective.
       
       // Small delay between batches to respect rate limits
       if (i + batchSize < facets.length) {
-        await new Promise(resolve => setTimeout(resolve, 100));
+        await new Promise(resolve => setTimeout(resolve, 500));
       }
     }
     
