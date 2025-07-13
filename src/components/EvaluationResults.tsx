@@ -1,7 +1,6 @@
 import React from 'react';
 import { EvaluationResult, BatchEvaluationResult } from '../types/evaluation';
 import { ExportButtons } from './ExportButtons';
-import { ExportButtons } from './ExportButtons';
 import { CategoryRadarChart } from './CategoryRadarChart';
 import { ConfidenceHistogram } from './ConfidenceHistogram';
 import { BatchSummaryDashboard } from './BatchSummaryDashboard';
@@ -67,16 +66,6 @@ export const EvaluationResults: React.FC<EvaluationResultsProps> = ({
         </div>
       )}
 
-      {/* Merge Controls */}
-      {evaluationResults.length > 1 && !isBatchResult && (
-        <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl p-6 border border-gray-200">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">
-            Batch Export Options ({evaluationResults.length} evaluations)
-          </h3>
-          <ExportButtons results={evaluationResults} isMergeMode={true} />
-        </div>
-      )}
-
       {/* Individual Results */}
       {evaluationResults.map((result, index) => (
         <div key={result.id} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
@@ -95,7 +84,6 @@ export const EvaluationResults: React.FC<EvaluationResultsProps> = ({
                   {new Date(result.timestamp).toLocaleString()}
                 </div>
               </div>
-              <ExportButtons results={[result]} isMergeMode={false} />
               <ExportButtons results={[result]} isMergeMode={false} />
             </div>
             
@@ -191,14 +179,16 @@ export const EvaluationResults: React.FC<EvaluationResultsProps> = ({
                     Consistency check: Re-evaluated the same text to measure score stability
                   </p>
                   <div className="text-sm text-purple-700">
-                    Average drift: ±{(Object.values(result.drift_log)
-                      .map(scores => Math.abs(scores[0] - scores[1]))
-                      .reduce((sum, drift) => sum + drift, 0) / Object.values(result.drift_log).length
+                    Average drift: ±{(
+                      Object.values(result.drift_log)
+                        .map(scores => Math.abs(scores[0] - scores[1]))
+                        .reduce((sum, drift) => sum + drift, 0) / Object.values(result.drift_log).length
                     ).toFixed(3)} points
                   </div>
                 </div>
               </div>
             )}
+
             {/* Facet Scores Summary */}
             <div className="border-t border-gray-200 pt-6 mb-6">
               <h4 className="text-lg font-semibold text-gray-900 mb-4">
