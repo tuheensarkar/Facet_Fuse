@@ -13,12 +13,6 @@ function App() {
   const [currentText, setCurrentText] = useState<string>();
   const [textProgress, setTextProgress] = useState<number>();
   const [evaluationEngine] = useState(() => new EvaluationEngine());
-
-  // Auto-run evaluation for the provided text
-  React.useEffect(() => {
-    const autoEvaluateText = "I'm truly sorry for the delay — I'll resolve this for you right away.";
-    handleEvaluate(autoEvaluateText);
-  }, []);
   const handleEvaluate = useCallback(async (text: string) => {
     setIsLoading(true);
     setProgress(0);
