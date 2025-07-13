@@ -179,7 +179,7 @@ export const EvaluationResults: React.FC<EvaluationResultsProps> = ({
                     Consistency check: Re-evaluated the same text to measure score stability
                   </p>
                   <div className="text-sm text-purple-700">
-                    Average drift: ±{Object.values(result.drift_log)
+                    Average drift: ±{(Object.values(result.drift_log)
                       .map(scores => Math.abs(scores[0] - scores[1]))
                       .reduce((sum, drift) => sum + drift, 0) / Object.values(result.drift_log).length
                     ).toFixed(3)} points
