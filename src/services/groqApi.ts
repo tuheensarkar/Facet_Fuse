@@ -1,6 +1,6 @@
 import { GroqResponse, EvaluationPromptResponse } from '../types/evaluation';
 
-const GROQ_API_KEY = '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';
+const GROQ_API_KEY = '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';
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 
 export class GroqApiService {
